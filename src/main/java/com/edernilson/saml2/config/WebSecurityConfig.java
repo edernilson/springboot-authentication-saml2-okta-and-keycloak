@@ -54,7 +54,7 @@ import java.util.*;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true)
-@Profile(value = "keycloak")
+@Profile(value = {"keycloak","okta"})
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements InitializingBean, DisposableBean {
 
     @Value("${saml.keystore.location}")

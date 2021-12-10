@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.edernilson.saml2</groupId>
 	<artifactId>springboot-saml2-okta-keycloak</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot And SAML 2.0</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

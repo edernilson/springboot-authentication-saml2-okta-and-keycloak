@@ -4,8 +4,8 @@
     [X] Libs configuration
     [X] Keycloak configuration for new application
     [X] SAML connection for kecloak
-    [ ] Okta configuration for new application
-    [ ] Tests with new profile 
+    [X] Okta configuration for new application
+    [X] Tests with new profile 
 
 # SAML 2.0 Integration - Federation
 
@@ -18,4 +18,15 @@
 1.2. Export cert and import into IDP (Identity Provider)
 
 	keytool -export -keystore saml-keystore.jks -alias demosaml2 -file saml2.cer
+
+1) On the **Configure SAML** page, click **Show Advanced Settings***.
+2) Select the check box to **Allow application to initiate Single Logout**.
+3) Configure properties:
+   1) Single Logout url: http://localhost:8080/spring-security-saml2-sample/saml/logout
+   2) SP Issuer : http://localhost:8080/spring-security-saml2-sample/saml/metadata
+   3) Created certificate (saml2.cer) and uploaded.
+
+1.3. Add form cert into IDP (** not tested yet **)
+
+	keytool -importcert -alias myidp -file saml2.cer -keystore saml-keystore.jks
 	

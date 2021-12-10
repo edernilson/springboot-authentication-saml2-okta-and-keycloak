@@ -18,7 +18,6 @@ import java.util.List;
 @Service
 public class UserDetailsServiceImpl implements SAMLUserDetailsService {
 	
-	// Logger
 	private static final Logger LOG = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
 	
 	public Object loadUserBySAML(SAMLCredential credential)
@@ -32,7 +31,7 @@ public class UserDetailsServiceImpl implements SAMLUserDetailsService {
 
 		for (Attribute attribute: credential.getAttributes()) {
 			String value = ((XSStringImpl) attribute.getAttributeValues().get(0)).getValue();
-			LOG.info(attribute.getName()+": "+value);
+			LOG.info("Attribute=> "+attribute.getName()+": "+value);
 		}
 
 		LOG.info(userEmail + " is logged in");
